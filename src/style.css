@@ -1,0 +1,17 @@
+body {
+  background-color: pink;
+}
+
+.weather-app-container {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 30px 50px rgb(65, 50, 100, 0.08);
+  padding: 40px;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+}
