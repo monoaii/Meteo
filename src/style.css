@@ -71,7 +71,7 @@ header {
   margin-left: 10px;
 }
 .weather-app-temp-unit {
-  margin-top: 45px;
+  margin: 45px 0 0 5px;
   font-size: 15px;
   font-family: "Pacifico", cursive;
 }
