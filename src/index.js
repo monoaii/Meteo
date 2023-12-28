@@ -21,6 +21,8 @@ function updateWeatherData(response) {
   iconElement.innerHTML = `<img
       src="${response.data.condition.icon_url}"
       class="weather-app-icon"/>`;
+
+  getForecast(response.data.city);
 }
 
 //function for date
@@ -68,6 +70,13 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
+//function for get API forecast
+function getForecast(city) {
+  let apiKey = "7feob78d78cbdf431afd487b07c045tb";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 //function for weather forecast
 function displayForecast() {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -93,4 +102,3 @@ function displayForecast() {
 }
 
 searchCity("Seattle");
-displayForecast();
