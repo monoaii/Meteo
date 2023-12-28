@@ -68,4 +68,29 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
+//function for weather forecast
+function displayForecast() {
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="forecast-preview">
+        <div class="forecast-day"> ${day} </div>
+        <div class="forecast-emoji"> ☀️ </div>
+        <div class="forecast-temp"> 
+          <span class="forecast-high-temp"> 20° </span> 
+          <span class="forecast-low-temp"> 14° </span> 
+        </div>
+      </div>
+      `;
+  });
+
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 searchCity("Seattle");
+displayForecast();
