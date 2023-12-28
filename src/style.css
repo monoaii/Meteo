@@ -73,6 +73,28 @@ body {
   font-family: "Pacifico", cursive;
 }
 
+#weather-forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-day {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.forecast-temp {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.forecast-low-temp {
+  color: gray;
+}
+
 footer {
   padding-top: 30px;
   text-align: center;
